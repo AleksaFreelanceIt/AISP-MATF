@@ -18,10 +18,10 @@ int main(){
         auto it_min = lower_bound(niz.begin(), niz.end(), a);
         auto it_max = upper_bound(niz.begin(), niz.end(), b);
         
-        if(it_min == niz.end() || it_max == niz.begin() || it_min >= it_max)
-            cout << "NEMA\n";
-        else
+        if(it_min < it_max)
             cout << *it_min << " " << *(it_max-1) <<'\n';
+        else
+            cout << "NEMA\n";
     }
     
     return 0;
